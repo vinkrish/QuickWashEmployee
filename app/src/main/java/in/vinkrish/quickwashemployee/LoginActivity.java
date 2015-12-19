@@ -24,7 +24,7 @@ public class LoginActivity extends AppCompatActivity {
     EditText userName, password;
     Button login;
     private CoordinatorLayout coordinatorLayout;
-    private static final String BASE_URL = "http://vinkrish.info";
+    private static final String BASE_URL = "http://localhost";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

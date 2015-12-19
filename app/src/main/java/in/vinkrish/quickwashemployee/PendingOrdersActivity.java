@@ -27,7 +27,7 @@ public class PendingOrdersActivity extends AppCompatActivity {
     private RecyclerView mRecyclerView;
     private List<Order> orderList;
     private CoordinatorLayout coordinatorLayout;
-    private static final String BASE_URL = "http://vinkrish.info";
+    private static final String BASE_URL = "http://localhost";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
