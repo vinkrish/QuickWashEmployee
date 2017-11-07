@@ -8,7 +8,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import java.util.List;
@@ -69,25 +69,25 @@ public class MyRecyclerAdapter extends RecyclerView.Adapter<MyRecyclerAdapter.Cu
         return (null != orderList ? orderList.size() : 0);
     }
 
-    public class CustomViewHolder extends RecyclerView.ViewHolder {
-        protected TextView dateTV;
-        protected TextView serviceTV;
-        protected TextView nameTV;
-        protected TextView mobileTV;
-        protected TextView addressTV;
-        protected TextView pincodeTV;
-        protected Button callBtn;
+    class CustomViewHolder extends RecyclerView.ViewHolder {
+        private TextView dateTV;
+        private TextView serviceTV;
+        private TextView nameTV;
+        private TextView mobileTV;
+        private TextView addressTV;
+        private TextView pincodeTV;
+        private ImageButton callBtn;
 
-        public CustomViewHolder(View view) {
+        CustomViewHolder(View view) {
             super(view);
 
-            this.dateTV = (TextView) view.findViewById(R.id.date_tv);
-            this.serviceTV = (TextView) view.findViewById(R.id.service_tv);
-            this.nameTV = (TextView) view.findViewById(R.id.name_tv);
-            this.mobileTV = (TextView) view.findViewById(R.id.mobile_tv);
-            this.addressTV = (TextView) view.findViewById(R.id.address_tv);
-            this.pincodeTV = (TextView) view.findViewById(R.id.pincode_tv);
-            this.callBtn = (Button) view.findViewById(R.id.call_btn);
+            this.dateTV = view.findViewById(R.id.date_tv);
+            this.serviceTV = view.findViewById(R.id.service_tv);
+            this.nameTV = view.findViewById(R.id.name_tv);
+            this.mobileTV = view.findViewById(R.id.mobile_tv);
+            this.addressTV = view.findViewById(R.id.address_tv);
+            this.pincodeTV = view.findViewById(R.id.pincode_tv);
+            this.callBtn = view.findViewById(R.id.call_btn);
         }
 
     }

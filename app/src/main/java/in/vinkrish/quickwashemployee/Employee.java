@@ -1,4 +1,4 @@
-package in.vinkrish.quickwashemployee.adapter;
+package in.vinkrish.quickwashemployee;
 
 /**
  * Created by vinkrish on 17/12/15.
