@@ -68,8 +68,10 @@ public class LoginActivity extends AppCompatActivity {
                 progressBar.setVisibility(View.GONE);
                 if (response.isSuccessful()) {
                     if (response.body().getStatus().equals("success")) {
-                        Intent intent = new Intent(LoginActivity.this, in.vinkrish.quickwashemployee.PendingOrdersActivity.class);
+                        SharedPreferenceUtil.updateLogged(LoginActivity.this, true);
+                        Intent intent = new Intent(LoginActivity.this, PendingOrdersActivity.class);
                         startActivity(intent);
+                        finish();
                     } else {
                         showSnackBar("login failed, please try with valid credentials!");
                     }

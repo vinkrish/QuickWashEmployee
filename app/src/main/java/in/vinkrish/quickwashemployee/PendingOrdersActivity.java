@@ -1,5 +1,6 @@
 package in.vinkrish.quickwashemployee;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.Snackbar;
@@ -53,15 +54,12 @@ public class PendingOrdersActivity extends AppCompatActivity {
         if (id == R.id.action_refresh) {
             checkOrder();
         } else if (id == R.id.action_logout) {
-            System.exit(0);
+            SharedPreferenceUtil.updateLogged(getApplicationContext(), false);
+            startActivity(new Intent(this, LoginActivity.class));
+            finish();
         }
 
         return super.onOptionsItemSelected(item);
-    }
-
-    @Override
-    public void onBackPressed() {
-
     }
 
     private void checkOrder() {
